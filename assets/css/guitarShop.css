@@ -1,0 +1,2816 @@
+/* css for Guitarras de Luna */
+
+/* Cover all the bases */
+html,body,div,span,applet,object,iframe,
+h1,h2,h3,h4,h5,h6,
+p,blockquote,pre,a,
+abbr,acronym,address,big,cite,
+code,del,dfn,em,img,ins,kbd,q,s,samp,
+small,strike,strong,sub,sup,tt,var,b,u,i,center,
+dl,dt,dd,ol,ul,li,
+fieldset,form,label,legend,table,caption,
+tbody,tfoot,thead,tr,th,td,
+article,aside,canvas,details,embed,figure,figcaption,footer,
+header,hgroup,menu,nav,output,ruby,section,summary,
+time,mark,audio,video {
+	margin:0; 
+	padding:0; 
+	border:0; 
+	font-size:100%; 
+	font:inherit; 
+	vertical-align:baseline
+}
+
+/*
+	display:block means the element is displayed as a block-level element 
+		(like paragraphs and headers)
+*/
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display:block
+}
+
+body{
+	line-height:1
+}
+
+ol,ul{
+	list-style:none
+}
+
+blockquote,q{
+	quotes:none
+}
+
+/*
+	:before and :after are pseudo-elements - in the case below, 
+		it's putting a null instead of opening and closing quotes (or some other element)
+	Most browsers recommend using :: instead of : for pseudo-elements, but IE won't accept them yet
+*/
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after{
+	content:'';
+	content:none
+}
+
+/*
+	border-collapse:collapse means that borders are collapsed into a single border when possible
+		(border-spacing and empty-cells properties will be ignored)
+*/
+
+table{
+	border-collapse:collapse;
+	border-spacing:0
+}
+
+button,
+label{
+	cursor:pointer
+}
+
+em{font-style:italic}
+
+strong{font-weight:700}
+
+.centered {
+	text-align:center
+}
+
+.icon26,
+.button.arrow:before,
+button.arrow:before,
+form .select span:after,
+.main_body .contact_us li:before,
+#contact_overlay form button:before{
+	width:26px;
+	height:26px;
+	background-image:url(/assets/images/icons/26px_1x.png);
+	background-repeat:no-repeat;
+	background-size:260px 520px
+}
+
+/* 40px_1x.png contains social media icons accessed by offset */
+
+.icon40,
+.main_body .social a,
+#contact_overlay>a,
+#about_us .span5 a {
+	width:40px;
+	height:40px;
+	background-image:url(/assets/images/icons/40px_1x.png);
+	background-repeat:no-repeat;
+	background-size:120px 240px
+}
+
+
+/* 26px_2x.png & 40px_2x.png are missing from site? */
+@media only screen and (-webkit-min-device-pixel-ratio: 2 {
+	.icon26,
+	.button.arrow:before,
+	button.arrow:before,
+	form .select span:after,
+	.main_body .contact_us li:before,
+	#contact_overlay form button:before{
+		background-image:url(/assets/images/icons/26px_2x.png)
+	}
+	.icon40,.main_body .social a,
+	#contact_overlay>a,
+	#about_us .span5 a{
+		background-image:url(/assets/images/icons/40px_2x.png)
+	}
+}
+
+
+/*  #EBEBEB is pale gray
+	#FAFAFA is very pale gray - almost white
+	#FFF000 is bright yellow
+	box-shadow: horizontal-offset, vertical-offset, blur-distance, spread-distance
+*/
+.stack{
+	border-radius:6px;
+	box-shadow: 1px 1px #EBEBEB,
+				2px 2px #FAFAFA,
+				3px 3px #EBEBEB,
+				4px 4px #FAFAFA,
+				5px 5px #EBEBEB;
+	background-color:#FFF
+}
+
+/* 	rbg (0,0,0,0.1) is black at 10% opacity
+	#FFF000 is bright yellow
+*/
+
+.white_panel,
+ul.ticklist,
+#about_us_landing .people{
+	border-radius:6px;
+	box-shadow:2px 2px rgba(0,0,0,0.1);
+	background-color:#FFF
+}
+
+#about_us_landing .people{
+	position:relative
+}
+
+/*
+	The z-index property specifies the stack order of an element.
+
+	An element with greater stack order is always in front of an element with a lower stack order.
+
+	Note: z-index only works on positioned elements (position:absolute, position:relative,
+	 or position:fixed).
+*/
+
+#about_us_landing .people:before{
+	content:'';
+	display:block;
+	position:absolute;
+	height:54px;
+	right:10px;
+	top:-9px;
+	width:40px;
+	z-index:100
+}
+
+/* 
+	Support for IE9
+*/
+
+.lt-ie9 #about_us_landing .people:before,
+#about_us_landing .lt-ie9 .people:before{
+	display:none
+}
+
+.georgia,
+.content_wrapper .quote_arrow,
+.top_bar h4,
+#contact_overlay form h2,
+#home_header .slide div h1,
+#home_header .slide div h3,
+.people a h4,
+.show_me_more a span,
+#the_facts h2{
+	font-family:Georgia,serif;
+	font-weight:normal;
+	font-style:normal
+}
+
+.top_bar p a{
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif
+}
+
+#contact_overlay form input,
+#contact_overlay form textarea{
+	font-family:Tahoma, Geneva, sans-serif;
+	font-weight:normal;
+	font-style:normal
+}
+
+/* 
+	Clearfix clears prior CSS settings
+*/
+
+.clearfix,
+.content_wrapper,
+.container,
+.row,
+#homepage_landing .left_column{
+	zoom:1
+}
+
+.clearfix:before,
+.content_wrapper:before,
+.container:before,
+.row:before,
+#homepage_landing .left_column:before,
+.clearfix:after,
+.content_wrapper:after,
+.container:after,
+.row:after,
+#homepage_landing .left_column:after{
+	content:"";
+	display:table
+}
+
+.clearfix:after,
+.content_wrapper:after,
+.container:after,
+.row:after,
+#homepage_landing .left_column:after{
+	clear:both
+}
+
+.ir,
+.main_body .social a,
+#contact_overlay>a,
+.slider nav a span,
+#about_us .span5 a{
+	background-color:transparent;
+	border:0;
+	color:transparent;
+	font:0/0 a;
+	text-shadow:none
+}
+
+.ellipsis{
+	overflow:hidden;
+	-ms-text-overflow:ellipsis;
+	-o-text-overflow:ellipsis;
+	text-overflow:ellipsis;
+	white-space:nowrap
+}
+
+/* 
+	zoom:1 is original size
+	Numbers smaller than one are zoom out (shrink), numbers larger than 1 are zoom in (magnify)
+*/
+
+.inline-block,
+.button,
+button,
+form .select,
+form .checkbox,
+span[data-src],
+.primary .container>a,
+nav.dots a,
+.top_bar a.followus,
+.main_body .social a,
+.share .count,
+.share .social_button,
+#home_header .slide div h1 span,
+.people .person,#about_us .span5 a,
+header .slide h2{
+	display:inline-block;
+	vertical-align:baseline;
+	zoom:1;
+	*display:inline;
+	*vertical-align:auto
+}
+
+/* 	opacity 0 fully transparent
+	opacity 1 is fully opaque
+*/
+
+/* 
+The @keyframes CSS at-rule lets authors control the intermediate steps in a CSS animation sequence by establishing keyframes (or waypoints) along the animation sequence that must be reached by certain points during the animation. This gives you more specific control over the intermediate steps of the animation sequence than you get when letting the browser handle everything automatically. 
+*/
+	 
+@-ms-keyframes zoomIn{
+	0%{opacity:0; -ms-transform:scale(0)}
+	100%{opacity:1; -ms-transform:scale(1)}
+}
+@-moz-keyframes zoomIn{
+	0%{opacity:0; -moz-transform:scale(0)}
+	100%{opacity:1;-moz-transform:scale(1)}
+}
+@-webkit-keyframes zoomIn{
+	0%{opacity:0;-webkit-transform:scale(0)}
+	100%{opacity:1;-webkittransform:scale(1)}
+}
+
+/*
+-moz-backface-visibility:
+The CSS backface-visibility property determines whether or not the back face of the element is visible when facing the user. The back face of an element always is a transparent background, letting, when visible, a mirror image of the front face be displayed.
+
+-moz-perspective:1000
+The perspective CSS property determines the distance between the z=0 plane and the user in order to give to the 3D-positioned element some perspective. Each 3D element with z>0 becomes larger; each 3D-element with z<0 becomes smaller. The strength of the effect is determined by the value of this property.
+
+-webkit-backface-visibility:
+Determines whether or not a transformed element is visible when it is not facing the screen.
+
+-webkit-perspective:
+Gives depth to a scene, causing elements farther away from the viewer to appear smaller.
+*/
+
+.hardware,
+#overlay,
+.tooltip,
+.primary,
+header .slide,
+header nav a,
+nav.arrows .header_tooltip,
+.main_body .social a,
+footer .meta,
+#contact_overlay,
+.slider nav a,
+.people a,
+.compare_swipe span:first-child,
+.compare_swipe div{
+	-moz-backface-visibility:hidden;
+	-moz-perspective:1000;
+	-webkit-backface-visibility:hidden;
+	-webkit-perspective:1000
+}
+
+/*
+-webkit-text-size-adjust:
+Specifies a size adjustment for displaying text content in Safari on iPhone.
+*/
+
+html{height:100%;
+	-webkit-text-size-adjust:none;
+	font-size:62.5%
+}
+
+/* 
+	#32363f is a dark blue-gray
+	#333000 is very dark gray
+*/
+body{background:#32363f url(/assets/images/template/page_background.gif);
+	color:#333000;
+	font-family:Georgia, serif;
+	font-weight:400;
+	height:100%;
+	min-height:100%
+}
+
+/*
+	#D71501 is red
+*/
+
+a{
+	text-decoration:none;
+	color:#D71501
+}
+
+/*
+ 	#FBF47C is yellow
+ 	rgba(0,0,0,0.2) is black at 20% opacity
+ 	#333000 is very dark gray
+ 	
+ 	CSS3 transitions are effects that let an element gradually change from one style to another.
+*/
+
+.button,button{
+	font-size:16px;
+	font-size:1.6rem;
+	position:relative;
+	color:#333;
+	font-style:italic;
+	background:#FBF47C;
+	padding:2px 12px 0;
+	border-radius:4px;
+	box-shadow:2px 2px rgba(0,0,0,0.2);
+	line-height:34px;
+	-webkit-transition:background 0.1s cubic-bezier(0.365, 0.005, 0.355, 1);
+	-moz-transition:background 0.1s cubic-bezier(0.365, 0.005, 0.355, 1);
+	-ms-transition:background 0.1s cubic-bezier(0.365, 0.005, 0.355, 1);
+	-o-transition:background 0.1s cubic-bezier(0.365, 0.005, 0.355, 1);
+	transition:background 0.1s cubic-bezier(0.365, 0.005, 0.355, 1)
+}
+
+.button.arrow,
+button.arrow{
+	padding-right:36px
+}
+
+.button.arrow:before,
+button.arrow:before{
+	content:'';
+	display:block;
+	position:absolute;
+	background-position:-130px -26px;
+	right:3px;top:50%;
+	margin-top:-13px
+}
+
+/*
+	#f9f04b is a darker yellow
+*/
+
+.button:hover,
+button:hover{
+	background:#f9f04b
+}
+
+/*
+	#FFF000 is bright yellow
+	rgba(116,110,4,0.3) is a dark olive gray at 30% opacity
+*/
+
+.button:active,
+button:active{
+	top:2px;left:2px;
+	box-shadow:1px 1px #FFF000,inset 1px 1px 4px rgba(116,110,4,0.3)
+}
+
+/*
+	rgba(255,255,255,0.2) is white at 20% opacity
+	rgba(116,110,4,0.3) is a dark olive gray at 30% opacity
+*/
+
+footer .button:active,
+footer button:active{
+	box-shadow:1px 1px rgba(255,255,255,0.2),inset 1px 1px 4px rgba(116,110,4,0.3)
+}
+
+/*
+	#E2E2E2 is very light gray
+	#D4D4D4 is light gray
+	#C3C3C3 is medium gray
+	#E3E3E3 is very, very light gray
+*/
+
+.image_frame{
+	border-width:1px;
+	border-style:solid;
+	border-color:#E2E2E2 #D4D4D4 #C3C3C3 #D4D4D4;
+	border-radius:5px;
+	box-shadow:0 1px #E3E3E3;
+	padding:1px;
+	background-color:white
+}
+
+/*
+	#F7F7F7 is a very pale gray, almost white
+*/
+
+.image_frame .image{
+	border:3px solid #F7F7F7;
+	padding:5px;
+	background-color:white;
+	border-radius:5px;
+	position:relative
+}
+
+.image_frame .image img{
+	border-radius:3px
+}
+
+input,textarea,button{
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	outline:none;
+	border:none
+}
+
+form .select{
+	position:relative;
+	height:32px;
+	line-height:32px
+}
+
+/*
+	DADDE0 is a pale blue-gray
+	#EEE000 is a dark yellow
+	#FFFEFF is a very pale, very slightly purple white
+	#E8E8EA is a very pale, very slightly blue gray	
+	
+	The CSS linear-gradient() function creates an <image> which represents a linear gradient of colors.
+*/
+
+form .select span{
+	display:block;
+	padding:0 38px 0 10px;
+	height:30px;
+	border:solid 1px DADDE0;
+	border-radius:6px;
+	background: #EEE000;
+	background: linear-gradient(top, #FFFEFF 0%,#E8E8EA 100%);
+	background: -o-linear-gradient(top, #FFFEFF 0%, #E8E8EA 100%);
+	background: -ms-linear-gradient(top, #FFFEFF 0%, #E8E8EA 100%);
+	background: -moz-linear-gradient(top, #FFFEFF 0%, #E8E8EA 100%);
+	background: -webkit-linear-gradient(top, #FFFEFF 0%, #E8E8EA 100%);
+	text-shadow:0 1px #FFF000
+}
+
+form .select span:after{
+	content:'';display:block;
+	position:absolute;
+	background-position:-130px -52px;
+	top:3px;
+	right:3px
+}
+
+form .select select{
+	display:block;
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	z-index:10;
+	width:100%;
+	height:100%;
+	opacity:0;
+	-webkit-appearance:textfield
+}
+
+form .checkbox{
+	position:relative;
+	height:18px;
+	padding-left:24px;
+	margin-right:18px;
+	line-height:18px;
+	opacity:.6
+}
+
+form .checkbox i{
+	display:block;
+	position:absolute;
+	top:50%;
+	left:0;
+	width:18px;
+	height:18px;
+	margin-top:-9px;
+	background:url(/assets/images/icons/checkbox.png) 0 -18px no-repeat
+}
+
+form .checkbox input{
+	display:none
+}
+
+form .checkbox.checked,
+form .checkbox:hover,
+form .checkbox:focus{
+	opacity:1
+}
+
+form .checkbox.checked i,
+form .checkbox input:checked+i{
+	background-position:0 0
+}
+
+/*
+	#FFF000 is bright yellow
+	#BBB000 is a darkish gold
+*/
+
+.content_wrapper{
+	position:relative;
+	z-index:80;
+	padding-top:100px;
+	border-top:solid 1px #FFF000;
+	box-shadow:0 1px #BBB000,0 2px #FFF000,0 3px #BBB000,0 4px #FFF000,0 5px #BBB000,0 6px #FFF000,0 3px 0 6px rgba(0,0,0,0.1); 
+	background:#FFF000 url(/assets/images/template/background.png)
+}
+
+.container{
+	width:auto;
+	max-width:1170px;
+	margin:0 auto
+}
+
+@media only screen and (max-width: 1200px){
+	.container{width:970px}
+}
+
+img.responsive{width:100%}
+
+/*
+	#CCC000 is a gold mustard color
+*/
+
+img.responsive.border{box-shadow:0 0 0 5px #CCC000}
+
+span[data-src]{
+	position:relative;
+	opacity:0
+}
+
+span[data-src] img{
+	display:block;
+	margin:0
+}
+
+/*
+	#rgba(0,0,0,0.2) is black at 20% opacity
+	#DDD000 is a lighter gold mustard color
+*/
+
+.browser{
+	position:relative;
+	padding-top:26px;
+	border-radius:6px;
+	box-shadow:0 1px 8px rgba(0,0,0,0.2),0 0 0 1px rgba(0,0,0,0.2);
+	background:#DDD000
+}
+
+/*
+	rgba(255,255,255,0.2) is white at 20% opacity
+	#DDD000 is a lighter gold mustard color
+	#EEE000 is an even lighter gold mustard color
+	#EEEEEE is a light gray
+	#C0C0C0 is a medium gray
+	
+	The CSS linear-gradient() function creates an <image> which represents a linear gradient of colors.
+*/
+
+.browser:before{
+	content:'';
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:26px;
+	border-radius:5px 5px 0 0;
+	box-shadow:inset 0 1px rgba(255,255,255,0.2);
+	background:url(/assets/images/icons/browser.png) 0 50% no-repeat, #DDD000;
+	background:url(/assets/images/icons/browser.png) 0 50% no-repeat, linear-gradient(top, #EEEEEE 0%,#c0c0c0 100%);
+	background:url(/assets/images/icons/browser.png) 0 50% no-repeat, -o-linear-gradient(top, #EEE000 0%, silver 100%);
+	background:url(/assets/images/icons/browser.png) 0 50% no-repeat, -ms-linear-gradient(top, #EEE000 0%, silver 100%);
+	background:url(/assets/images/icons/browser.png) 0 50% no-repeat, -moz-linear-gradient(top, #EEE000 0%, silver 100%);
+	background:url(/assets/images/icons/browser.png) 0 50% no-repeat, -webkit-linear-gradient(top, #EEE000 0%, silver 100%)
+}
+
+.browser img{
+	display:block;
+	border-radius:0 0 6px 6px
+}
+
+ul.ticklist{
+	padding:10px
+}
+
+ul.ticklist li{
+	padding:10px 10px 10px 35px;
+	background:url(/assets/images/icons/icon_ticklist.png) 3px 8px no-repeat;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif
+}
+
+ul.ticklist li:last-child{
+	border-bottom:none
+}
+
+.bullets li,#blog_post .content li{
+	padding-left:30px;
+	margin:15px 0;
+	background:url(/assets/images/icons/bullet_grey.png) 8px 6px no-repeat;
+	background-size:10px
+}
+
+/*
+	#FFF000 is bright yellow
+*/
+
+#overlay{
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	z-index:0;
+	width:100%;
+	height:0;
+	background:#FFF000
+}
+
+/*
+	rgba(0,0,0,0.3) is black at 30% opacity
+	#222000 is very dark gold/gray, almost black
+	#333333 is very dark red/gray, almost black
+	#111111 is very dark red/gray, almost black (a bit darker than #333333)
+	#333000 is very dark olive/gray, almost black
+	#111000 is very dark olive/gray, almost black (a bit darker than #333000)
+	
+	The CSS linear-gradient() function creates an <image> which represents a linear gradient of colors.
+*/
+
+.tooltip{
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:80;
+	max-width:180px;
+	padding:10px 12px 11px;
+	border-radius:5px;
+	box-shadow:0 1px 1px rgba(0,0,0,0.3);
+	background: #222000;
+	background: linear-gradient(top, #333333 0%,#111111 100%);
+	background: -o-linear-gradient(top, #333000 0%, #111000 100%);
+	background: -ms-linear-gradient(top, #333000 0%, #111000 100%);
+	background: -moz-linear-gradient(top, #333000 0%, #111000 100%);
+	background: -webkit-linear-gradient(top, #333000 0%, #111000 100%);
+	color:#FFF000;text-shadow:0 1px 1px #000;line-height:18px;font-size:14px;
+	font-size:1.4rem
+}
+
+/*
+	#111000 is very dark olive/gray, almost black (a bit darker than #333000)
+*/
+
+.tooltip:after{
+	content:'';
+	display:inline-block;
+	position:absolute;
+	width:0;
+	height:0;
+	border:solid 6px transparent;
+	margin-bottom:-6px;
+	border-top-color:#111000;
+	vertical-align:top;
+	bottom:-6px;
+	left:50%;
+	margin-left:-6px
+}
+
+/*
+	#C80909 is dark cherry red
+	#F41010is bright red
+	#FFF000 is bright yellow
+	#970707 is a burgundy red
+	
+	The CSS linear-gradient() function creates an <image> which represents a linear gradient of colors.
+*/
+
+.tooltip.error_tooltip{
+	z-index:120;
+	max-width:200px;
+	background: #C80909;
+	background: linear-gradient(top, #F41010 0%,#C80909 100%);
+	background: -o-linear-gradient(top, #F41010 0%, #C80909 100%);
+	background: -ms-linear-gradient(top, #F41010 0%, #C80909 100%);
+	background: -moz-linear-gradient(top, #F41010 0%, #C80909 100%);
+	background: -webkit-linear-gradient(top, #F41010 0%, #C80909 100%);
+	color:#FFF000;
+	text-shadow:0 1px 1px #970707
+}
+
+/*
+	#C80909 is dark cherry red
+*/
+
+.tooltip.error_tooltip:after{
+	border-top-color:#C80909
+}
+
+.row{
+	margin-left:-30px;
+	*zoom:1
+}
+
+.row [class*="span"]{
+	float:left;
+	margin-left:30px
+}
+
+.span1{width:70px}
+
+.span2{width:170px}
+
+.span3{width:270px}
+
+.span4{width:370px}
+
+.span5{width:470px}
+
+.span6{width:570px}
+
+.span7{width:670px}
+
+.span8{width:770px}
+
+.span9{width:870px}
+
+.span10{width:970px}
+
+.span11{width:1070px}
+
+.span12{width:1170px}
+
+.offset1{margin-left:130px}
+
+.offset2{margin-left:230px}
+
+.offset3{margin-left:330px}
+
+.offset4{margin-left:430px}
+
+.offset5{margin-left:530px}
+
+.offset6{margin-left:630px}
+
+.offset7{margin-left:730px}
+
+.offset8{margin-left:830px}
+
+.offset9{margin-left:930px}
+
+.offset10{margin-left:1030px}
+
+.offset11{margin-left:1130px}
+
+@media only screen and (max-width: 1200px){
+	.span5{width:370px}
+	.span6{width:470px}
+	.span7{width:580px}
+}
+
+h1,h2,h3,h4,h5{
+	font-weight:700;
+	line-height:1.1;
+	font-style:italic
+}
+
+/*
+	rgba(0,0,0,0.14) is black at 14% opacity
+*/
+
+h1{
+	font-size:80px;
+	font-size:8rem;
+	margin:50px 0 40px 0;
+	text-shadow:3px 4px 0 rgba(0,0,0,0.14)
+}
+
+h2{
+	font-size:48px;
+	font-size:4.8rem;
+	text-shadow:2px 3px 0 rgba(0,0,0,0.14)
+}
+
+h3{
+	font-size:24px;
+	font-size:2.4rem;
+	line-height:1.3;
+	margin-bottom:10px
+}
+
+h4{
+	font-size:20px;
+	font-size:2rem
+}
+
+h5{
+	font-size:17px;
+	font-size:1.7rem;
+	text-transform:uppercase
+}
+
+/*
+	#D71501 is a darkish red
+	#F7D0CC is a darkish pink
+	
+	CSS3 transitions are effects that let an element gradually change from one style to another.
+*/
+
+.content_wrapper p a,
+.content_wrapper ul a,
+.content_wrapper dl a,
+.content_wrapper ol a{
+	-webkit-transition:color 0.3s, border-bottom 0.3s;
+	-moz-transition:color 0.3s, border-bottom 0.3s;
+	-ms-transition:color 0.3s, border-bottom 0.3s;
+	-o-transition:color 0.3s, border-bottom 0.3s;
+	transition:color 0.3s, border-bottom 0.3s;
+	color:#D71501;
+	border-bottom: 1px dashed #F7D0CC;
+	background:none
+}
+
+/*
+	#810C00 is very dark red
+	#F7D0CC is a darkish pink
+	
+	CSS3 transitions are effects that let an element gradually change from one style to another.
+*/
+
+.content_wrapper p a:hover,
+.content_wrapper ul a:hover,
+.content_wrapper dl a:hover,
+.content_wrapper ol a:hover{
+	-webkit-transition:color 0.3s, border-bottom 0.3s;
+	-moz-transition:color 0.3s, border-bottom 0.3s;
+	-ms-transition:color 0.3s, border-bottom 0.3s;
+	-o-transition:color 0.3s, border-bottom 0.3s;
+	transition:color 0.3s, border-bottom 0.3s;
+	color:#810C00;
+	border-bottom:1px solid #F7D0CC
+}
+
+.content_wrapper p,
+.content_wrapper ul,
+.content_wrapper dl,
+.content_wrapper ol{
+	font-size:16px;
+	font-size:1.6rem;
+	line-height:1.5;
+	margin:0 0 24px 0
+}
+
+.content_wrapper p.xl,
+.content_wrapper p.section_intro{
+	font-size:24px;
+	font-size:2.4rem;
+	font-style:italic;
+	font-weight:700;
+	line-height:1.5;
+	margin:24px 0 24px 0
+}
+
+/*
+	#CCC000 is gold/mustard
+	rgba(0,0,0,0.5); is black at 50% opacity
+*/
+
+.content_wrapper p.section_intro{
+	position:relative;
+	margin:20px auto 40px auto;
+	width:800px;padding:20px 0;
+	border-top:1px dashed #CCC000;
+	border-bottom:1px dashed #CCC000;
+	color:rgba(0,0,0,0.5);
+	text-align:center
+}
+
+.content_wrapper p.section_intro a{
+	font-weight:700
+}
+
+.content_wrapper p.section_intro:before{
+	content:'';
+	display:block;
+	position:absolute;
+	top:-25px;
+	left:50%;
+	margin-left:-22px;
+	width:44px;
+	height:61px;
+	background:url(/assets/images/icons/icon_guitar.png)
+}
+
+.content_wrapper p.xs,
+.content_wrapper small{
+	font-size:13px;
+	font-size:1.3rem
+}
+
+.content_wrapper p.sm{
+	font-size:18px;
+	font-size:1.8rem
+}
+
+/*
+	#E9DD79 is light gold
+	#FDF083 is very light gold	
+*/
+
+.content_wrapper blockquote{
+	position:relative;
+	padding:34px 34px 1px;
+	margin:22px 0;
+	border-radius:6px;
+	box-shadow:1px 1px #E9DD79,2px 2px #FDF083,3px 3px #E9DD79,4px 4px #FDF083,5px 5px rgba(0,0,0,0.1);
+	background:#FDF083
+}
+
+.content_wrapper blockquote p{
+	font-size:16px;
+	font-size:1.6rem;
+	color:#000;
+	line-height:1.55;
+	font-style:italic
+}
+
+/*
+	#4B4827 is dark olive gold
+*/
+
+.content_wrapper blockquote p:last-child{
+	font-size:15px;
+	font-size:1.5rem;
+	display:block;
+	margin:-5px 0 15px;
+	line-height:20px;
+	text-align:right;
+	color:#4B4827
+}
+
+/*
+	#333000 is very dark olive/gray, almost black
+*/
+
+.content_wrapper blockquote p:last-child cite{
+	font-size:22px;
+	font-size:2.2rem;
+	display:block;
+	font-weight:700;
+	color:#333000
+}
+
+.content_wrapper blockquote:before{
+	content:'';
+	display:block;
+	position:absolute;
+	top:-14px;
+	right:8px;
+	width:27px;
+	height:50px;
+	background-size:27px 50px
+}
+
+.lt-ie9 
+.content_wrapper 
+.quote_arrow{
+	background:none;
+	padding-bottom:0
+}
+
+.content_wrapper 
+.quote_arrow.right{
+	background-position:-150px 100%
+}
+
+.content_wrapper 
+.quote_arrow.left{
+	background-position:0 100%;
+	text-align:right
+}
+
+.primary{
+	top:0;
+	right:0;
+	left:0;
+	z-index:110;
+	height:100px;
+	text-align:right;
+	font-size:0px;
+	font-size:0rem
+}
+
+.primary.top{
+	position:absolute
+}
+
+/*
+	rgba(0,0,0,0.1) is black at 10% opacity
+	#FBF47C is light yellow
+*/
+
+.primary.fixed{
+	position:fixed;
+	margin-top:-110px;
+	box-shadow:0 3px rgba(0,0,0,0.1);
+	background:#FBF47C
+}
+
+.primary a.logo{
+	float:left;
+	margin-left:20px
+}
+
+.primary img{
+	position:absolute;
+	top:25%;
+	left:0;
+	height:50%
+}
+
+.primary img.dark{
+	opacity:0
+}
+
+.lt-ie9 
+.primary 
+img.dark{
+	display:none
+}
+
+.primary 
+.container{
+	height:100%
+}
+
+.primary 
+.container>a{
+	position:relative;
+	z-index:10;
+	height:100%
+}
+
+.primary a span{
+	display:block;
+	position:relative;
+	top:50%;height:28px;
+	padding:2px 12px;
+	margin:-16px 5px 0;
+	border-radius:5px;
+	font-weight:700;
+	font-size:14px;
+	font-size:1.4rem;
+	line-height:28px;
+	text-transform:uppercase
+}
+
+.primary 
+a.drop_down 
+span{
+	padding-right:30px
+}
+
+.primary 
+a.drop_down 
+span:after{
+	content:'';
+	display:block;
+	position:absolute
+}
+
+.primary 
+a.drop_down:hover 
+span{
+	padding-right:28px
+}
+
+.primary 
+a:hover 
+span{
+	border:solid 2px #444000;
+	padding:0 10px
+}
+
+/*
+	#FFF000 is bright yellow
+	rgba(0,0,0,0.2) is black at 20% opacity
+*/
+
+.primary a span{
+	color:#FFF000;
+	text-shadow:1px 1px rgba(0,0,0,0.2)
+}
+
+/*
+	rgba(255,255,255,0.6) is white at 60% opacity
+	rgba(0,0,0,0.1) is black at 10% opacity
+*/
+
+.primary a:hover span{
+	border-color:rgba(255,255,255,0.6);
+	box-shadow:inset 1px 1px rgba(0,0,0,0.1),1px 1px rgba(0,0,0,0.1)
+}
+
+/*
+	rgba(0,0,0,0.1) is black at 10% opacity
+	#FFF000 is bright yellow
+	#FFFFFF is white
+	#E5E5E5 is light gray
+	
+	The CSS linear-gradient() function creates an <image> which represents a linear gradient of colors.
+*/
+
+.primary a.on span{
+	box-shadow:1px 1px rgba(0,0,0,0.1);
+	background: #FFF000;
+	background: linear-gradient(top, #FFFFFF 0%, #E5E5E5 100%);
+	background: -o-linear-gradient(top, #FFF000 0%, #E5E5E5 100%);
+	background: -ms-linear-gradient(top, #FFF000 0%, #E5E5E5 100%);
+	background: -moz-linear-gradient(top, #FFF000 0%, #E5E5E5 100%);
+	background: -webkit-linear-gradient(top, #FFF000 0%, #E5E5E5 100%);
+	color:#444000;
+	text-shadow:1px 1px #FFF000
+}
+
+/*
+	#333000 is very dark olive/gray, almost black
+	#FFF000 is bright yellow
+*/
+
+.primary a.on:hover span{
+	color:#333000;
+	background:#FFF000
+}
+
+/*
+	#333000 is very dark olive/gray, almost black
+*/
+
+.primary.dark a span,
+.primary.fixed a span{
+	color:#333000
+}
+
+/*
+	#444000 is very dark olive/gray, almost black
+	rgba(0,0,0,0.05) is black at 50% opaque
+*/
+
+.primary.dark a:hover span,
+.primary.fixed a:hover span{
+	border-color:#444000;
+	box-shadow:inset 1px 1px rgba(0,0,0,0.05),1px 1px rgba(0,0,0,0.05)
+}
+
+/*
+	rgba(0,0,0,0) is black at 0% opaque
+	#444000 is very dark olive/gray, almost black
+	#222000 is very dark gold/gray, almost black
+	#333000 is very dark olive/gray, almost black
+	#CCC000 is gold/mustard
+	rgba(0,0,0,0.06) is black at 60% opaque
+	
+	The CSS linear-gradient() function creates an <image> which represents a linear gradient of colors.
+*/
+
+
+.primary.dark a.on span,
+.primary.fixed a.on span{
+	box-shadow:1px 1px rgba(0,0,0,0);
+	background: #333000;
+	background: linear-gradient(top, #444444 0%,#222000 100%);
+	background: -o-linear-gradient(top, #444000 0%, #222000 100%);
+	background: -ms-linear-gradient(top, #444000 0%, #222000 100%);
+	background: -moz-linear-gradient(top, #444000 0%, #222000 100%);
+	background: -webkit-linear-gradient(top, #444000 0%, #222000 100%);
+	color:#CCC000;
+	text-shadow:0 1px rgba(0,0,0,0.6)
+}
+
+/*
+	#444000 is very dark olive/gray, almost black
+	#555000 is very dark gold/gray, almost black, a bit lighter than #444000
+	#333000 is very dark olive/gray, almost black, a bit darker than #444000
+	rgba(0,0,0,0.06) is black at 60% opaque
+	
+	The CSS linear-gradient() function creates an <image> which represents a linear gradient of colors.
+*/
+
+.primary.dark a.on:hover span,
+.primary.fixed a.on:hover span{
+	background: #444000;
+	background: linear-gradient(top, #555555 0%,#333333 100%);
+	background: -o-linear-gradient(top, #555000 0%, #333000 100%);
+	background: -ms-linear-gradient(top, #555000 0%, #333000 100%);
+	background: -moz-linear-gradient(top, #555000 0%, #333000 100%);
+	background: -webkit-linear-gradient(top, #555000 0%, #333000 100%)
+}
+
+.primary.dark .dark,
+.primary.fixed .dark{
+	opacity:1
+}
+
+.lt-ie9 .primary.dark .dark,
+.lt-ie9 .primary.fixed .dark{
+	display:block
+}
+
+.primary.dark .light,
+.primary.fixed .light{
+	opacity:0
+}
+
+.lt-ie9 .primary.dark .light,
+.lt-ie9 .primary.fixed .light{
+	display:none
+}
+
+body>header,
+header .slide{
+	position:relative;
+	z-index:40;
+	width:100%;
+	height:100%;
+	max-height:686px;
+	overflow:hidden
+}
+
+/*
+	rgba(0,0,0,0.1) is black at 10% opacity
+	background-size:cover scales the background image to be as large as possible
+		so that the background area is completely covered by the background image. 
+*/
+header .slide{
+	display:none;
+	position:fixed;
+	top:0;left:0;
+	z-index:10;
+	box-shadow:0 0 0 3px rgba(0,0,0,0.1);
+	background-size:cover;
+	background-position:50% 50%
+}
+
+header+.content_wrapper,
+.show_me_more+.content_wrapper{
+	padding-top:0
+}
+
+nav.arrows{
+	position:fixed;
+	top:0;
+	right:6%;
+	left:6%;
+	z-index:80;
+	height:100%;
+	max-height:686px;
+	overflow:hidden
+}
+
+/*
+	rgba(0,0,0,0.3) is black at 30% opacity
+	#FFF000 is bright yellow
+	#FFFFFF is white
+	#EEEEEE is light gray
+	#EEE000 is dark yellow
+	#333000 is very dark olive/gray, almost black, a bit darker than #444000
+	
+	The CSS linear-gradient() function creates an <image> which represents a linear gradient of colors.
+*/
+
+nav.arrows .header_tooltip{
+	position:absolute;
+	top:50%;
+	padding:2px 8px 0;
+	margin-top:-14px;
+	border-radius:5px;
+	box-shadow:0 1px 1px rgba(0,0,0,0.3);
+	background: #FFF000;
+	background: linear-gradient(top, #FFFFFF 0%, #EEEEEE 100%);
+	background: -o-linear-gradient(top, #FFF000 0%, #EEE000 100%);
+	background: -ms-linear-gradient(top, #FFF000 0%, #EEE000 100%);
+	background: -moz-linear-gradient(top, #FFF000 0%, #EEE000 100%);
+	background: -webkit-linear-gradient(top, #FFF000 0%, #EEE000 100%);
+	color:#333000;
+	text-shadow:0 1px #FFF000;
+	font-size:22px;
+	font-weight:bold;
+	text-transform:uppercase;
+	line-height:28px;
+	font-size:14px;
+	font-size:1.4rem
+}
+
+nav.arrows .header_tooltip:after{
+	content:'';
+	display:block;
+	position:absolute;
+	top:50%;
+	width:0;
+	height:0;
+	margin-top:-4px;
+	border:solid transparent 4px
+}
+
+nav.arrows 
+.header_tooltip.left{
+	left:70px
+}
+
+/*
+	#F5F5F5 is very pale pinkish gray, almost white 
+*/
+
+nav.arrows 
+.header_tooltip.left:after{
+	left:-8px;
+	border-right-color:#F5F5F5
+}
+
+nav.arrows 
+.header_tooltip.right{
+	right:70px;
+	text-align:right
+}
+
+/*
+	#F5F5F5 is very pale pinkish gray, almost white 
+*/
+
+nav.arrows 
+.header_tooltip.right:after{
+	right:-8px;
+	border-left-color:#F5F5F5
+}
+
+nav.dots{
+	position:absolute;
+	right:0;
+	bottom:0;
+	left:0;
+	z-index:90;
+	height:60px;
+	font-size:0;
+	text-align:center;
+	line-height:60px
+}
+
+/*
+	rgba(0,0,0,0.3) is black at 30% opacity
+	#FFF000 is bright yellow 
+	
+	CSS3 transitions are effects that let an element gradually change from one style to another.
+*/
+
+nav.dots a{
+	position:relative;
+	width:12px;
+	height:12px;
+	border:solid 2px #FFF000;
+	margin:0 5px;
+	opacity:.4;
+	border-radius:10px;
+	box-shadow:2px 2px rgba(0,0,0,0.3);
+	-webkit-transition:opacity 0.2s;
+	-moz-transition:opacity 0.2s;
+	-ms-transition:opacity 0.2s;
+	-o-transition:opacity 0.2s;
+	transition:opacity 0.2s
+}
+
+nav.dots a:hover,
+nav.dots a.on{
+	opacity:1
+}
+
+/*
+	#FFF000 is bright yellow 
+*/
+
+nav.dots a.on:before{
+	content:'';
+	display:block;
+	position:relative;
+	top:3px;
+	left:3px;
+	width:6px;
+	height:6px;
+	border-radius:3px;
+	background:#FFF000
+}
+
+/*
+	fgba(0,0,0,0.9) is black at 90% opacity
+	
+	CSS3 transitions are effects that let an element gradually change from one style to another.
+*/
+
+span.timer{
+	position:absolute;
+	right:0;
+	bottom:0;
+	left:0;
+	z-index:80;
+	width:100%;
+	height:3px;
+	background:rgba(0,0,0,0.9);
+	-webkit-transition:opacity 0.4s;
+	-moz-transition:opacity 0.4s;
+	-ms-transition:opacity 0.4s;
+	-o-transition:opacity 0.4s;
+	transition:opacity 0.4s
+}
+
+/*
+	#FBF47C is yellow
+*/
+
+span.timer span{
+	display:block;
+	width:0;
+	height:100%;
+	background:#FBF47C
+}
+
+body>header:hover span.timer{
+	opacity:0
+}
+
+span.loading{
+	position:absolute
+}
+
+@media only screen and (max-width: 1200px){
+	body>header,
+	header .slide,
+	nav.arrows{max-height:440px}
+}
+
+/*
+	#141619 is very dark gray/blue, almost black
+	rgba(0,0,0,0.6) is black at 60% opacity
+*/
+
+body>footer{
+	font-size:16px;
+	font-size:1.6rem;
+	clear:both;
+	position:relative;
+	z-index:60;
+	background:#141619 url(/assets/images/template/page_background.gif);
+	color:#FFF000;
+	text-shadow:1px 1px 1px 1px rgba(0,0,0,0.6)
+}
+
+/*
+	#FBF47C is yellow
+	#FEFCE4 is pale cream yellow
+	
+	CSS3 transitions are effects that let an element gradually change from one style to another.
+*/
+
+body>footer a{
+	-webkit-transition:color 0.3s,border-bottom 0.3s;
+	-moz-transition:color 0.3s,border-bottom 0.3s;
+	-ms-transition:color 0.3s,border-bottom 0.3s;
+	-o-transition:color 0.3s,border-bottom 0.3s;
+	transition:color 0.3s,border-bottom 0.3s;
+	color:#FBF47C;
+	border-bottom:1px dashed #FEFCE4;
+	background:none;
+	border:none
+}
+
+/*
+	#96924A is olive green
+	#FEFCE4 is pale cream yellow
+	
+	CSS3 transitions are effects that let an element gradually change from one style to another.
+*/
+
+body>footer a:hover{
+	-webkit-transition:color 0.3s,border-bottom 0.3s;
+	-moz-transition:color 0.3s,border-bottom 0.3s;
+	-ms-transition:color 0.3s,border-bottom 0.3s;
+	-o-transition:color 0.3s,border-bottom 0.3s;
+	transition:color 0.3s,border-bottom 0.3s;
+	color:#96924A;
+	border-bottom:1px solid #FEFCE4
+}
+
+body>footer a:hover{
+	border:none
+}
+
+body>footer>div{
+	padding:1px 0
+}
+
+/*
+	rgba(0,0,0,0.12) is black at 12% opacity
+	rgba(255,255,255,0.05) is white at 50% opacity
+	#2D3038 is dark gray/blue
+*/
+
+.top_bar{
+	box-shadow:inset 0 -2px rgba(0,0,0,0.12),0 1px rgba(255,255,255,0.05);
+	background:#2D3038;
+	background:rgba(0,0,0,0.12)
+}
+
+.top_bar .container{
+	padding:40px 0 40px 0;
+	text-align:center
+}
+
+/*
+	#848484 is a medium-dark gray
+*/
+
+.top_bar h4{
+	font-size:18px;
+	font-size:1.8rem;
+	color:#848484
+}
+
+.top_bar p{
+	font-size:20px;
+	font-size:2rem;
+	background:url(/assets/images/template/footer/twitter_bird.png) center top no-repeat;
+	padding:75px 130px 0;
+	line-height:1.5;
+	margin:0
+}
+
+/*
+	rgba(255,255,255,0.4) is white at 40% opacity
+*/
+
+.top_bar time{
+	font-size:12px;
+	font-size:1.2rem;
+	font-style:italic;
+	color:rgba(255,255,255,0.4)
+}
+
+/*
+	#00A0D1 is cornflower blue (maybe twitter blue?)
+	#FFF000 is bright yellow
+*/
+
+.top_bar a.followus{
+	font-size:12px;
+	font-size:1.2rem;
+	padding:10px;
+	border-radius:6px;
+	background:#00A0D1;
+	margin:20px 0 0 0;
+	font-style:normal;
+	color:#FFF000;
+	border:none
+}
+
+/*
+	#00A0D1 is cornflower blue (maybe twitter blue?)
+	#FFF000 is bright yellow
+*/
+
+.top_bar a.followus:hover{
+	color:#00A0D1;
+	background:#FFF000
+}
+
+/*
+	rgba(255,255,255,0.05) is white at 50% opacity
+	rgba(0,0,0,0.2) is black at 20% opacity
+*/
+
+.main_body{
+	box-shadow:inset 0 -1px rgba(255,255,255,0.05),0 2px rgba(0,0,0,0.2)
+}
+
+.main_body section{
+	padding:30px 0
+}
+
+@media only screen and (max-width: 1200px){
+	.main_body section{width:303px}
+}
+
+/*
+	rgba(0,0,0,0.4) is black at 40% opacity
+*/
+
+.main_body h2{
+	font-size:26px;
+	font-size:2.6rem;
+	color:#F1F1F1;
+	text-shadow:1px 1px 2px rgba(0,0,0,0.4)
+}
+
+/*
+	#797F8C is medium blue-gray
+*/
+
+.main_body h3{
+	font-size:14px;
+	font-size:1.4rem;
+	font-weight:400;
+	color:#797F8C;
+	text-shadow:none
+}
+
+.main_body li{
+	margin-bottom:10px
+}
+
+.main_body li:last-child{
+	margin-bottom:0
+}
+
+.main_body 
+.contact_us 
+hgroup{
+	margin-bottom:20px
+}
+
+.main_body 
+.contact_us 
+li{
+	position:relative;
+	padding-left:25px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif
+}
+
+.main_body 
+.contact_us 
+li:before{
+	content:'';
+	display:block;
+	position:absolute;
+	top:-7px;
+	left:-4px
+}
+
+.main_body 
+.contact_us 
+li.phone:before{
+	background-position:-78px 0px
+}
+
+.main_body 
+.contact_us 
+li.email:before{
+	background-position:-78px -26px
+}
+
+.main_body 
+.contact_us 
+li.google:before{
+	background-position:-78px -52px
+}
+
+.main_body 
+.contact_us 
+li.homepage:before{
+	background-position:-78px -78px
+}
+
+/*
+	CSS3 transitions are effects that let an element gradually change from one style to another.
+*/
+
+.main_body 
+.social a{
+	transform:scale(0.9);
+	-o-transform:scale(0.9);
+	-ms-transform:scale(0.9);
+	-moz-transform:scale(0.9);
+	-webkit-transform:scale(0.9);
+	transition:transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+	-o-transition:-o-transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+	-ms-transition:-ms-transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+	-moz-transition:-moz-transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+	-webkit-transition:-webkit-transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1)
+}
+
+.main_body 
+.social a.pinterest{
+	background-position:0px 0px
+}
+
+.main_body 
+.social a.twitter{
+	background-position:0px -40px
+}
+
+.main_body 
+.social a.facebook{
+	background-position:0px -80px
+}
+
+.main_body 
+.social a:hover{
+	transform:scale(1);
+	-o-transform:scale(1);
+	-ms-transform:scale(1);
+	-moz-transform:scale(1);
+	-webkit-transform:scale(1)
+}
+
+.main_body 
+.work_with_us hgroup{
+	margin-bottom:20px
+}
+
+/*
+	rgba(255,255,255,0.4) is white at 40% opacity
+	rgba(0,0,0,0.2) is black at 20% opacity
+	#141619 is very dark blue gray, almost black
+*/
+
+footer 
+.meta{
+	font-size:12px;
+	font-size:1.2rem;
+	color:rgba(255,255,255,0.4);
+	box-shadow:0 1px rgba(255,255,255,0.05),inset 0 -2px rgba(0,0,0,0.2);
+	background:#141619;
+	padding:20px 0
+}
+
+footer 
+.meta 
+.container{
+	position:relative
+}
+
+footer 
+.meta 
+.container p{
+	line-height:1.5;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif
+}
+
+footer 
+.meta 
+.container 
+.logo{
+	position:absolute;
+	top:8px;
+	right:0;
+	width:133px;
+	height:44px;
+	background:url(/assets/images/template/footer/footer_logo.png)
+}
+
+/*
+	rgba(0,0,0,0.2) is black at 20% opacity
+	#FFF000 is bright yellow
+*/
+
+#contact_overlay{
+	position:fixed;
+	left:-150%;
+	top:50%;
+	z-index:110;
+	width:940px;
+	height:550px;
+	margin:-235px 0 0 -470px;
+	border-radius:6px;
+	box-shadow:0 1px 8px rgba(0,0,0,0.2);
+	background:#FFF000
+}
+
+@media only screen and (max-width: 1200px){
+	#contact_overlay{
+		position:absolute;
+		margin-top:-210px
+	}
+}
+
+#contact_overlay p{
+	font-size:14px;
+	font-size:1.4rem;
+	line-height:1.5;
+	margin:0 0 24px 0
+}
+
+/*
+	#D71501 is a darkish red
+	#F7D0CC is a darkish pink
+	
+	CSS3 transitions are effects that let an element gradually change from one style to another.
+*/
+
+#contact_overlay p a{
+	-webkit-transition:color 0.3s,border-bottom 0.3s;
+	-moz-transition:color 0.3s,border-bottom 0.3s;
+	-ms-transition:color 0.3s,border-bottom 0.3s;
+	-o-transition:color 0.3s,border-bottom 0.3s;
+	transition:color 0.3s,border-bottom 0.3s;
+	color:#D71501;
+	border-bottom:1px dashed #F7D0CC;
+	background:none
+}
+
+/*
+	#810C00 is very dark red
+	#F7D0CC is a darkish pink
+	
+	CSS3 transitions are effects that let an element gradually change from one style to another.
+*/
+
+#contact_overlay p a:hover{
+	-webkit-transition:color 0.3s,border-bottom 0.3s;
+	-moz-transition:color 0.3s,border-bottom 0.3s;
+	-ms-transition:color 0.3s,border-bottom 0.3s;
+	-o-transition:color 0.3s,border-bottom 0.3s;
+	transition:color 0.3s,border-bottom 0.3s;
+	color:#810C00;
+	border-bottom:1px solid #F7D0CC
+}
+
+#contact_overlay p.xl,
+#contact_overlay .content_wrapper p.section_intro,
+.content_wrapper #contact_overlay p.section_intro{
+	font-size:24px;
+	font-size:2.4rem;
+	font-style:italic;
+	font-weight:700;
+	line-height:1.5;
+	margin:24px 0 24px 0
+}
+
+#contact_overlay>a{
+	display:block;
+	background-position:-40px 0px;
+	position:absolute;
+	top:-14px;
+	right:-14px;
+	z-index:50
+}
+
+/*
+	rgba(0,0,0,0.05) is black at 5% opacity
+*/
+	
+#contact_overlay form{
+	position:relative;
+	float:left;
+	width:390px;
+	height:470px;
+	padding:40px;
+	box-shadow:inset -2px 0 3px rgba(0,0,0,0.05);
+	z-index:20;
+	border-radius:6px 0 0 6px;
+	background:url(/assets/images/contact/border.gif) -7px 0 repeat-x
+}
+
+#contact_overlay form .thank_you{display:none}
+
+#contact_overlay form h2{
+	display:block;
+	font-size:50px;
+	font-size:5rem;
+	margin-bottom:20px
+}
+
+#contact_overlay form .field{
+	position:relative;
+	width:370px;
+	margin-bottom:20px
+}
+
+/*
+	#D71501 is a darkish red
+*/
+
+#contact_overlay form .error label{
+	color:#D71501
+}
+
+/*
+	#D71501 is a darkish red
+*/
+
+#contact_overlay form .error input,
+#contact_overlay form .error textarea{
+	border-color:#D71501
+}
+
+#contact_overlay form label{
+	font-size:16px;
+	font-size:1.6rem;
+	width:100px;
+	font-style:italic;
+	position:absolute;
+	right:left;
+	top:10px
+}
+
+/*
+	#3A5997 is a dark gray-blue (cadet blue?)
+*/
+
+#contact_overlay form input,
+#contact_overlay form textarea{
+	font-size:22px;
+	font-size:2.2rem;
+	color:#3A5997;
+	padding:0
+}
+
+/*
+	#E8E8E8 is a pale slightly pinkish gray
+*/
+
+#contact_overlay form input{
+	width:270px;
+	margin-left:100px;
+	line-height:24px;
+	border-bottom:1px dashed #E8E8E8
+}
+
+/*
+	#E8E8E8 is a pale slightly pinkish gray
+*/
+
+#contact_overlay form textarea{
+	width:340px;
+	height:130px;
+	padding:15px;
+	border-radius:
+	10px;
+	border:1px dashed #E8E8E8;
+	resize:none
+}
+
+#contact_overlay form button{
+	font-size:16px;
+	font-size:1.6rem;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	border:none;
+	padding-left:30px
+}
+
+#contact_overlay form button:before{
+	content:'';
+	display:block;
+	position:absolute;
+	background-position:-130px 0px;
+	left:3px;top:5px
+}
+
+/*
+	#FFF000 is bright yellow
+*/
+
+#contact_overlay .map{
+	float:left;
+	position:relative;
+	width:466px;
+	height:546px;
+	border:solid 2px #FFF000;
+	border-radius:0 6px 6px 0
+}
+
+#contact_overlay .map h4{
+	margin-bottom:6px
+}
+
+#contact_overlay .map p{
+	margin:8px 0 0;
+	font-size:12px;
+	font-size:1.2rem;
+	line-height:16px
+}
+
+/*
+	#D71501 is a darkish red
+	#F7D0CC is a darkish pink
+	
+	CSS3 transitions are effects that let an element gradually change from one style to another.
+*/
+
+#contact_overlay .map p a{
+	-webkit-transition:color 0.3s,border-bottom 0.3s;
+	-moz-transition:color 0.3s,border-bottom 0.3s;
+	-ms-transition:color 0.3s,border-bottom 0.3s;
+	-o-transition:color 0.3s,border-bottom 0.3s;
+	transition:color 0.3s,border-bottom 0.3s;
+	color:#D71501;
+	border-bottom:1px dashed #F7D0CC;
+	background:none
+}
+
+/*
+	#810C00 is very dark red
+	#F7D0CC is a darkish pink
+	
+	CSS3 transitions are effects that let an element gradually change from one style to another.
+*/
+
+#contact_overlay .map p a:hover{
+	-webkit-transition:color 0.3s,border-bottom 0.3s;
+	-moz-transition:color 0.3s,border-bottom 0.3s;
+	-ms-transition:color 0.3s,border-bottom 0.3s;
+	-o-transition:color 0.3s,border-bottom 0.3s;
+	transition:color 0.3s,border-bottom 0.3s;
+	color:#810C00;
+	border-bottom:1px solid #F7D0CC
+}
+
+#contact_overlay .costs{
+	display:none;
+	position:absolute;
+	top:0;
+	right:0;
+	width:470px;
+	height:550px;
+	overflow:hidden;
+	z-index:10
+}
+
+/*
+	#FFF000 is bright yellow
+	rgba(0,0,0,0.2) is black at 20% opacity
+	
+	CSS3 transitions are effects that let an element gradually change from one style to another.
+*/
+
+nav.arrows a,.slides>a{
+	display:block;
+	position:absolute;
+	top:50%;
+	width:32px;
+	height:32px;
+	margin-top:-19px;
+	border:solid 3px #FFF000;
+	border-radius:24px;
+	box-shadow:2px 2px rgba(0,0,0,0.2);
+	opacity:.4;
+	-webkit-transition:opacity 0.2s ease-in-out;
+	-moz-transition:opacity 0.2s ease-in-out;
+	-ms-transition:opacity 0.2s ease-in-out;
+	-o-transition:opacity 0.2s ease-in-out;
+	transition:opacity 0.2s ease-in-out;
+	text-indent:-100px
+}
+
+nav.arrows a:after,
+.slides>a:after{
+	content:'';
+	display:block;
+	position:absolute;
+	top:10px;
+	width:0;height:0;
+	border:solid 6px transparent
+}
+
+nav.arrows a.prev,
+.slides>a.prev{
+	left:10px
+}
+
+
+/*
+	#FFF000 is bright yellow
+*/
+nav.arrows a.prev:after,
+.slides>a.prev:after{
+	left:6px;
+	border-right-color:#FFF000
+}
+
+nav.arrows a.next,
+.slides>a.next{
+	right:10px
+}
+
+/*
+	#FFF000 is bright yellow
+*/
+nav.arrows a.next:after,
+.slides>a.next:after{
+	right:6px;
+	border-left-color:#FFF000
+}
+
+nav.arrows a:hover,
+.slides>a:hover{
+	opacity:1
+}
+
+span.loading{
+	top:50%;
+	left:50%;
+	width:48px;
+	height:48px;
+	margin:-23px 0 0 -23px;
+	z-index:80
+}
+
+span.loading span,
+span.loading i{
+	display:block;
+	position:absolute;
+	width:46px;
+	height:46px;
+	background:url(/assets/images/icons/loading_skull.png);
+	-webkit-animation:loading_spinner 2s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+	-webkit-animation:loading_spinner 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+	-moz-animation:loading_spinner 2s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+	-ms-animation:loading_spinner 2s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+	-o-animation:loading_spinner 2s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+	animation:loading_spinner 2s cubic-bezier(0.645, 0.045, 0.355, 1) infinite}
+
+span.loading span{
+	top:0;
+	left:0;
+	z-index:1
+}
+
+span.loading i{
+	top:2px;
+	left:2px;
+	z-index:0;
+	background-position:0 -92px
+}
+
+/*
+	#FFF000 is bright yellow
+	rgba(0,0,0,0.05) is black at 5% opacity
+*/
+body>span.loading{
+	position:fixed;
+	z-index:200;
+	background:#FFF000;
+	margin:-32px 0 0 -32px;
+	border:solid 6px #FFF000;
+	border-radius:60px;
+	box-shadow:0 0 0 4px rgba(0,0,0,0.05)
+}
+
+body>span.loading span{
+	background-position:0 -46px
+}
+
+@-webkit-keyframes loading_spinner{
+	0%{-webkit-transform:scale(1) rotate(0deg)}
+	50%{-webkit-transform:scale(0.8) rotate(360deg)}
+	100%{-webkit-transform:scale(1) rotate(720deg)}
+}
+@-moz-keyframes loading_spinner{
+	0%{-moz-transform:scale(1) rotate(0deg)}
+	50%{-moz-transform:scale(0.8) rotate(360deg)}
+	100%{-moz-transform:scale(1) rotate(720deg)}
+}
+@-ms-keyframes loading_spinner{
+	0%{-ms-transform:scale(1) rotate(0deg)}
+	50%{-ms-transform:scale(0.8) rotate(360deg)}
+	100%{-ms-transform:scale(1) rotate(720deg)}
+}
+
+@-o-keyframes loading_spinner{
+	0%{-o-transform:scale(1) rotate(0deg)}
+	50%{-o-transform:scale(0.8) rotate(360deg)}
+	100%{-o-transform:scale(1) rotate(720deg)}
+}
+@keyframes loading_spinner{
+	0%{transform:scale(1) rotate(0deg)}
+	50%{transform:scale(0.8) rotate(360deg)}
+	100%{transform:scale(1) rotate(720deg)}
+}
+
+.slider{overflow:hidden}
+
+.slider .content{
+	position:relative;
+	top:0;
+	left:0;
+	width:100%;
+	white-space:nowrap;
+	font-size:0
+}
+	
+.slider img{width:100%}
+
+.slider nav{
+	display:block;
+	height:50px;
+	line-height:50px;
+	text-align:center
+}
+
+.slider nav a{
+	display:inline-block;
+	width:14px;
+	height:14px;
+	padding:6px 2px;
+	vertical-align:middle
+}
+
+/*
+	CSS3 transitions are effects that let an element gradually change from one style to another.
+*/
+
+.slider nav a span{
+	display:block;
+	width:14px;
+	height:14px;
+	overflow:hidden;
+	border-radius:7px;
+	background:#919397;
+	transform:scale(0.8);
+	-o-transform:scale(0.8);
+	-ms-transform:scale(0.8);
+	-moz-transform:scale(0.8);
+	-webkit-transform:scale(0.8);
+	transition:transform 0.05s cubic-bezier(0.19, 1, 0.22, 1);
+	-o-transition:-o-transform 0.05s cubic-bezier(0.19, 1, 0.22, 1);
+	-ms-transition:-ms-transform 0.05s cubic-bezier(0.19, 1, 0.22, 1);
+	-moz-transition:-moz-transform 0.05s cubic-bezier(0.19, 1, 0.22, 1);
+	-webkit-transition:-webkit-transform 0.05s cubic-bezier(0.19, 1, 0.22, 1)
+}
+
+/*
+	#343841 is dark blue gray
+*/
+
+.slider nav a:hover span,
+.slider nav a.on span{
+	background:#343841
+}
+
+.slider nav a:hover span{
+	transform:scale(1);
+	-o-transform:scale(1);
+	-ms-transform:scale(1);
+	-moz-transform:scale(1);
+	-webkit-transform:scale(1)
+}
+
+/* Handle cellphones */
+
+.iphone,.android{
+	position:relative
+}
+
+.iphone span,
+.android span{
+	position:absolute
+}
+
+.iphone{
+	width:265px;
+	height:554px;
+	background:url(/assets/images/devices/iphone.png) 0 0 no-repeat
+}
+
+.iphone span{
+	top:79px;
+	left:21px;
+	width:227px;
+	height:401px
+}
+
+.android{
+	width:222px;
+	height:422px;
+	background:url(/assets/images/devices/android.png) 0 0 no-repeat
+}
+
+.android span{
+	top:41px;
+	left:17px;
+	width:189px;
+	height:332px
+}
+
+.screen{
+	height:760px;
+	margin:20px 0 35px
+}
+
+.screen span{
+	position:absolute;
+	right:0;
+	width:50%;
+	height:760px;
+	overflow:hidden;
+	background:url(/assets/images/devices/screen.png) 0 0 no-repeat
+}
+
+.screen span img{
+	position:absolute;
+	top:48px;
+	left:55px;
+	margin:0
+}
+
+.people{
+	text-align:center
+}
+
+/*
+	#333000 is very dark olive/gray, almost black, a bit darker than #444000
+*/
+
+.people h3{
+	color:#333000
+}
+
+.people .person{
+	margin-right:60px
+}
+
+/*
+	#FFF000 is bright yellow
+	When you scroll over pictures of people, the size increases, 
+		and they get a bright yellow border
+		
+	CSS3 transitions are effects that let an element gradually change from one style to another.
+*/
+
+.people a{
+	transform:scale(0.9);
+	-o-transform:scale(0.9);
+	-ms-transform:scale(0.9);
+	-moz-transform:scale(0.9);
+	-webkit-transform:scale(0.9);
+	transition:transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+	-o-transition:-o-transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+	-ms-transition:-ms-transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+	-moz-transition:-moz-transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+	-webkit-transition:-webkit-transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+	width:160px;height:160px;
+	margin-bottom:10px;
+	display:block;
+	opacity:.7;
+	background:#FFF000;
+	border-radius:50%;
+	padding:6px
+}
+
+.people a img{
+	width:100%;
+	height:100%;
+	border-radius:50%
+}
+
+/*
+	#333000 is very dark olive/gray, almost black, a bit darker than #444000
+*/
+
+.people a h4{
+	font-size:35px;
+	font-size:3.5rem;
+	color:#333000;
+	margin-bottom:30px
+}
+
+/*
+	#FBF47C is yellow
+*/
+
+.people a:hover,.people a.active{
+	transform:scale(1);
+	-o-transform:scale(1);
+	-ms-transform:scale(1);
+	-moz-transform:scale(1);
+	-webkit-transform:scale(1);
+	opacity:1;					/* Sharpens the picture when active */
+	background:#FBF47C
+}
+
+@media only screen and (max-width: 1200px){
+	.people a{
+		width:120px;
+		height:120px
+	}
+}
+
+#about_us_landing .span6 h2{
+	margin-bottom:15px
+}
+
+#about_us_landing .people{
+	margin:10px 0 40px;
+	padding:40px 0 10px
+}
+
+#about_us_landing .people .container{
+	width:auto
+}
+
+#about_us_landing .people .person{
+	margin:0 0 30px 0
+}
+
+#about_header,
+#about_header .slide,
+#about_header nav{
+	max-height:560px
+}
+
+@media only screen and (max-width: 1200px){
+	#about_header,
+	#about_header .slide,
+	#about_header nav{
+		max-height:460px
+	}
+}
+
+/*
+	#C4C9CC is a light slightly-blue gray
+*/
+
+#about_header .slide{
+	background-position:50% 0;
+	background-size:auto 100%;
+	background-color:#C4C9CC
+}
+
+#about_us h2{
+	font-size:80px;
+	font-size:8rem;
+	margin:55px 0 5px 0
+}
+
+/*
+	rgba(0,0,0,0.4) is black at 40% opacity
+*/
+
+#about_us h3{
+	color:rgba(0,0,0,0.4)
+}
+
+#about_us p.xl,
+#about_us .content_wrapper p.section_intro,
+.content_wrapper #about_us p.section_intro{
+	margin:70px 0 35px
+}
+
+#about_us .button{
+	margin-top:15px
+}
+
+/*
+	CSS3 transitions are effects that let an element gradually change from one style to another.
+*/
+
+#about_us .span5 a{
+	transform:scale(0.9);
+	-o-transform:scale(0.9);
+	-ms-transform:scale(0.9);
+	-moz-transform:scale(0.9);
+	-webkit-transform:scale(0.9);
+	transition:transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+	-o-transition:-o-transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+	-ms-transition:-ms-transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+	-moz-transition:-moz-transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+	-webkit-transition:-webkit-transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1)
+}
+
+#about_us .span5 a.pinterest{
+	background-position:0px 0px
+}
+
+#about_us .span5 a.twitter{
+	background-position:0px -40px;
+	color:#FFFFFF
+}
+
+#about_us .span5 a.facebook{
+	background-position:0px -80px
+}
+
+#about_us .span5 a:hover{
+	transform:scale(1);
+	-o-transform:scale(1);
+	-ms-transform:scale(1);
+	-moz-transform:scale(1);
+	-webkit-transform:scale(1)
+}
+
+/*
+	#FFF000 is bright yellow
+*/
+
+#about_us .people{
+	margin-top:80px;
+	padding:40px 0;
+	background:#FFFFFF url(/assets/images/template/divider_dashed.png) top left repeat-x
+}
+
+@media only screen and (max-width: 1200px){
+	#about_us .span7{
+		width:570px
+	}
+}
+
+#homepage_landing .span6 h2{
+	margin-bottom:15px
+}
+
+#homepage_landing .people{
+	margin:10px 0 40px;
+	padding:40px 0 10px
+}
+
+#homepage_landing .people .container{
+	width:auto
+}
+
+#homepage_landing .people .person{
+	margin:0 0 30px 0
+}
+
+#homepage_header,
+#homepage_header .slide,
+#homepage_header nav{
+	max-height:560px
+}
+
+@media only screen and (max-width: 1200px){
+	#homepage_header,
+	#homepage_header .slide,
+	#homepage_header nav{
+		max-height:460px
+	}
+}
+
+/*
+	#C4C9CC is a light slightly-blue gray
+*/
+
+#homepage_header .slide{
+	background-position:50% 0;
+	background-size:auto 100%;
+	background-color:#C4C9CC
+}
+
+#homepage h2{
+	font-size:80px;
+	font-size:8rem;
+	margin:55px 0 5px 0
+}
+
+/*
+	rgba(0,0,0,0.4) is black at 40% opacity
+*/
+
+#homepage h3{
+	color:rgba(0,0,0,0.4)
+}
+
+#homepage p.xl,
+#homepage .content_wrapper p.section_intro,
+.content_wrapper #about_us p.section_intro{
+	margin:70px 0 35px
+}
+
+#homepage .button{
+	margin-top:15px
+}
+
+/*
+	CSS3 transitions are effects that let an element gradually change from one style to another.
+*/
+
+#homepage .span5 a{
+	transform:scale(0.9);
+	-o-transform:scale(0.9);
+	-ms-transform:scale(0.9);
+	-moz-transform:scale(0.9);
+	-webkit-transform:scale(0.9);
+	transition:transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+	-o-transition:-o-transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+	-ms-transition:-ms-transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+	-moz-transition:-moz-transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+	-webkit-transition:-webkit-transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1)
+}
+
+#homepage .span5 a.pinterest{
+	background-position:0px 0px
+}
+
+#homepage .span5 a.twitter{
+	background-position:0px -40px;
+	color:#FFFFFF
+}
+
+#homepage .span5 a.facebook{
+	background-position:0px -80px
+}
+
+#homepage .span5 a:hover{
+	transform:scale(1);
+	-o-transform:scale(1);
+	-ms-transform:scale(1);
+	-moz-transform:scale(1);
+	-webkit-transform:scale(1)
+}
+
+/*
+	#FFF000 is bright yellow
+*/
+
+#homepage .people{
+	margin-top:80px;
+	padding:40px 0;
+	background:#FFFFFF url(/assets/images/template/divider_dashed.png) top left repeat-x
+}
+
+@media only screen and (max-width: 1200px){
+	#homepage .span7{
+		width:570px
+	}
+}
+
+header .slide div{
+	position:absolute;
+	top:50%;
+	left:50%;
+	z-index:20;
+	text-align:center
+}
+
+header .slide .logo,
+header .slide h2{
+	position:relative
+}
+
+
+/* 
+	#FFF000 is bright yellow
+*/
+
+header .slide h2{
+	padding-left:40px;
+	margin-bottom:10px;
+	background:url(/assets/images/icons/closer_look.png) 0 50% no-repeat;
+	background-size:30px;
+	font-size:32px;
+	font-size:3.2rem;
+	color:#FFF000;
+	line-height:40px
+}
+
+.lt-ie9 header .slide h2{
+	background:none;
+	padding-left:0
+}
+
+#output{
+	position:fixed;
+	top:50%;
+	left:50%;
+	z-index:1000;
+	width:300px;
+	height:200px;
+	padding:5px;
+	margin:-115px 0 0 -165px;
+	border:solid 10px #FFF000;
+	border-radius:6px;
+	background:#FFF000;
+	font-family:monospace;
+	font-size:9px;
+	line-height:13px;color:#666000
+}
+
+#mobile .phones,#mobile .text{
+	float:left
+}
+
+#mobile .phones{
+	position:relative;
+	width:450px;
+	height:554px;
+	margin:0 30px 0 300px
+}
+
+#mobile .quote_arrow{
+	position:absolute;
+	top:0;
+	left:-200px;
+	margin-top:-10px
+}
+
+#mobile .iphone{
+	position:relative;
+	z-index:10
+}
+
+#mobile .android{
+	position:absolute;
+	top:70px;
+	left:200px;
+	z-index:5
+}
+	
+#mobile .text{width:300px}
+
+/*
+	rgba(0,0,0,0.8) is black at 80% opacity
+*/
+
+#mobile .text img{
+	float:right;
+	border-radius:16px;
+	box-shadow:0 1px 3px rgba(0,0,0,0.8);
+	margin:0 15px
+}
+
+#mobile h2{font-size:39px}
+
+@media only screen and (max-width: 1200px){
+	#mobile .quote_arrow{
+		display:none
+	}
+	#mobile .phones{
+		margin-left:50px
+	}
+}
