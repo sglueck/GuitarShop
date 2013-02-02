@@ -97,7 +97,7 @@ form .select span:after,
 #contact_overlay form button:before{
 	width:26px;
 	height:26px;
-	background-image:url(/assets/images/icons/26px_1x.png);
+	background-image:url(../../assets/images/icons/26px_1x.png);
 	background-repeat:no-repeat;
 	background-size:260px 520px
 }
@@ -110,7 +110,7 @@ form .select span:after,
 #about_us .span5 a {
 	width:40px;
 	height:40px;
-	background-image:url(/assets/images/icons/40px_1x.png);
+	background-image:url(../../assets/images/icons/40px_1x.png);
 	background-repeat:no-repeat;
 	background-size:120px 240px
 }
@@ -124,12 +124,12 @@ form .select span:after,
 	form .select span:after,
 	.main_body .contact_us li:before,
 	#contact_overlay form button:before{
-		background-image:url(/assets/images/icons/26px_2x.png)
+		background-image:url(../../assets/images/icons/26px_2x.png)
 	}
 	.icon40,.main_body .social a,
 	#contact_overlay>a,
 	#about_us .span5 a{
-		background-image:url(/assets/images/icons/40px_2x.png)
+		background-image:url(../../assets/images/icons/40px_2x.png)
 	}
 }
 
@@ -369,7 +369,7 @@ html{height:100%;
 	#32363f is a dark blue-gray
 	#333000 is very dark gray
 */
-body{background:#32363f url(/assets/images/template/page_background.gif);
+body{background:#32363f url(../../assets/images/template/page_background.gif);
 	color:#333000;
 	font-family:Georgia, serif;
 	font-weight:400;
@@ -565,7 +565,7 @@ form .checkbox i{
 	width:18px;
 	height:18px;
 	margin-top:-9px;
-	background:url(/assets/images/icons/checkbox.png) 0 -18px no-repeat
+	background:url(../../assets/images/icons/checkbox.png) 0 -18px no-repeat
 }
 
 form .checkbox input{
@@ -594,7 +594,7 @@ form .checkbox input:checked+i{
 	padding-top:100px;
 	border-top:solid 1px #FFF000;
 	box-shadow:0 1px #BBB000,0 2px #FFF000,0 3px #BBB000,0 4px #FFF000,0 5px #BBB000,0 6px #FFF000,0 3px 0 6px rgba(0,0,0,0.1); 
-	background:#F1F1F1 url(/assets/images/template/background.png)
+	background:#F1F1F1 url(../../assets/images/template/background.png)
 }
 
 .container{
@@ -658,12 +658,12 @@ span[data-src] img{
 	height:26px;
 	border-radius:5px 5px 0 0;
 	box-shadow:inset 0 1px rgba(255,255,255,0.2);
-	background:url(/assets/images/icons/browser.png) 0 50% no-repeat, #DDD000;
-	background:url(/assets/images/icons/browser.png) 0 50% no-repeat, linear-gradient(top, #EEEEEE 0%,#c0c0c0 100%);
-	background:url(/assets/images/icons/browser.png) 0 50% no-repeat, -o-linear-gradient(top, #EEE000 0%, silver 100%);
-	background:url(/assets/images/icons/browser.png) 0 50% no-repeat, -ms-linear-gradient(top, #EEE000 0%, silver 100%);
-	background:url(/assets/images/icons/browser.png) 0 50% no-repeat, -moz-linear-gradient(top, #EEE000 0%, silver 100%);
-	background:url(/assets/images/icons/browser.png) 0 50% no-repeat, -webkit-linear-gradient(top, #EEE000 0%, silver 100%)
+	background:url(../../assets/images/icons/browser.png) 0 50% no-repeat, #DDD000;
+	background:url(../../assets/images/icons/browser.png) 0 50% no-repeat, linear-gradient(top, #EEEEEE 0%,#c0c0c0 100%);
+	background:url(../../assets/images/icons/browser.png) 0 50% no-repeat, -o-linear-gradient(top, #EEE000 0%, silver 100%);
+	background:url(../../assets/images/icons/browser.png) 0 50% no-repeat, -ms-linear-gradient(top, #EEE000 0%, silver 100%);
+	background:url(../../assets/images/icons/browser.png) 0 50% no-repeat, -moz-linear-gradient(top, #EEE000 0%, silver 100%);
+	background:url(../../assets/images/icons/browser.png) 0 50% no-repeat, -webkit-linear-gradient(top, #EEE000 0%, silver 100%)
 }
 
 .browser img{
@@ -677,7 +677,7 @@ ul.ticklist{
 
 ul.ticklist li{
 	padding:10px 10px 10px 35px;
-	background:url(/assets/images/icons/icon_ticklist.png) 3px 8px no-repeat;
+	background:url(../../assets/images/icons/icon_ticklist.png) 3px 8px no-repeat;
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif
 }
 
@@ -688,7 +688,7 @@ ul.ticklist li:last-child{
 .bullets li,#blog_post .content li{
 	padding-left:30px;
 	margin:15px 0;
-	background:url(/assets/images/icons/bullet_grey.png) 8px 6px no-repeat;
+	background:url(../../assets/images/icons/bullet_grey.png) 8px 6px no-repeat;
 	background-size:10px
 }
 
@@ -979,7 +979,7 @@ h5{
 	margin-left:-22px;
 	width:44px;
 	height:61px;
-	background:url(/assets/images/icons/icon_guitar.png)
+	background:url(../../assets/images/icons/icon_guitar.png)
 }
 
 .content_wrapper p.xs,
@@ -1538,7 +1538,7 @@ body>footer{
 	clear:both;
 	position:relative;
 	z-index:60;
-	background:#32363f url(/assets/images/template/page_background.gif);
+	background:#32363f url(../../assets/images/template/page_background.gif);
 	color:#FFF000;
 	text-shadow:1px 1px 1px 1px rgba(0,0,0,0.6)
 }
@@ -1617,7 +1617,7 @@ body>footer>div{
 .top_bar p{
 	font-size:20px;
 	font-size:2rem;
-	background:url(/assets/images/template/footer/twitter_bird.png) center top no-repeat;
+	background:url(../../assets/images/template/footer/twitter_bird.png) center top no-repeat;
 	padding:75px 130px 0;
 	line-height:1.5;
 	margin:0
@@ -1842,7 +1842,7 @@ footer
 	right:0;
 	width:133px;
 	height:44px;
-	background:url(/assets/images/template/footer/footer_logo.png)
+	background:url(../../assets/images/template/footer/footer_logo.png)
 }
 
 /*
@@ -1945,7 +1945,7 @@ footer
 	box-shadow:inset -2px 0 3px rgba(0,0,0,0.05);
 	z-index:20;
 	border-radius:6px 0 0 6px;
-	background:url(/assets/images/contact/border.gif) -7px 0 repeat-x
+	background:url(../../assets/images/contact/border.gif) -7px 0 repeat-x
 }
 
 #contact_overlay form .thank_you{display:none}
@@ -2198,7 +2198,7 @@ span.loading i{
 	position:absolute;
 	width:46px;
 	height:46px;
-	background:url(/assets/images/icons/loading_skull.png);
+	background:url(../../assets/images/icons/loading_skull.png);
 	-webkit-animation:loading_spinner 2s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
 	-webkit-animation:loading_spinner 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
 	-moz-animation:loading_spinner 2s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
@@ -2346,7 +2346,7 @@ body>span.loading span{
 .iphone{
 	width:265px;
 	height:554px;
-	background:url(/assets/images/devices/iphone.png) 0 0 no-repeat
+	background:url(../../assets/images/devices/iphone.png) 0 0 no-repeat
 }
 
 .iphone span{
@@ -2359,7 +2359,7 @@ body>span.loading span{
 .android{
 	width:222px;
 	height:422px;
-	background:url(/assets/images/devices/android.png) 0 0 no-repeat
+	background:url(../../assets/images/devices/android.png) 0 0 no-repeat
 }
 
 .android span{
@@ -2380,7 +2380,7 @@ body>span.loading span{
 	width:50%;
 	height:760px;
 	overflow:hidden;
-	background:url(/assets/images/devices/screen.png) 0 0 no-repeat
+	background:url(../../assets/images/devices/screen.png) 0 0 no-repeat
 }
 
 .screen span img{
@@ -2582,7 +2582,7 @@ body>span.loading span{
 #about_us .people{
 	margin-top:80px;
 	padding:40px 0;
-	background:#FFFFFF url(/assets/images/template/divider_dashed.png) top left repeat-x
+	background:#FFFFFF url(../../assets/images/template/divider_dashed.png) top left repeat-x
 }
 
 @media only screen and (max-width: 1200px){
@@ -2701,7 +2701,7 @@ body>span.loading span{
 #homepage .people{
 	margin-top:80px;
 	padding:40px 0;
-	background:#FFFFFF url(/assets/images/template/divider_dashed.png) top left repeat-x
+	background:#FFFFFF url(../../assets/images/template/divider_dashed.png) top left repeat-x
 }
 
 @media only screen and (max-width: 1200px){
@@ -2731,7 +2731,7 @@ header .slide h2{
 header .slide h2{
 	padding-left:40px;
 	margin-bottom:10px;
-	background:url(/assets/images/icons/closer_look.png) 0 50% no-repeat;
+	background:url(../../assets/images/icons/closer_look.png) 0 50% no-repeat;
 	background-size:30px;
 	font-size:32px;
 	font-size:3.2rem;
