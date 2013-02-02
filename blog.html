@@ -1,0 +1,191 @@
+<!doctype html>
+<?php
+require('http://localhost/wordpress/wp-blog-header.php');
+?>
+<?php define('WP_USE_THEMES', false); get_header(); ?>
+<head>
+	<meta charset="utf-8">
+
+	<title>Blog - Guitarras de Luna</title>
+	<meta name="description" content="We provide a unique selection of custom guitars and guitar supplies for the discerning customer. " />
+	<meta name="keywords" content="guitarras de luna, guitars, music" />
+	<meta name="viewport" content="width=1100">
+
+
+	<link rel="icon" href="assets/images/icons/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="assets/css/guitarShop.css" media="screen">
+</head>
+
+
+<body>
+
+	<!--| NAVIGATION |-->
+	<nav class="primary top">
+
+		<div class="container">
+			<a href="index.html" class="logo">
+				<img class="light" src="assets/images/template/logo.png" alt="Guitarras de Luna">
+				<img class="dark" src="assets/images/template/logo_dark.png" alt="Guitarras de Luna">
+			</a>
+
+			<a href="about.html"><span>About</span></a>
+			<a href="blog.html" class="on"><span>Blog</span></a>
+			<a href="custom.html"><span>Custom Guitars</span></a>
+			<a href="lessons.html"><span>Lessons</span></a>
+			<a href="contact.html"><span>Contact</span></a>
+		</div>
+
+	</nav>
+	
+	
+	
+	<header>
+		<div class="slide" data-nav="light" data-bg="/assets/images/blog/banner.jpg"></div>
+
+	</header>
+
+	<div id="about_us_landing" class="content_wrapper">
+
+		<div class="container">
+	
+			<h1 class="centered">Interludes</h1>
+
+			<p class="section_intro">The Blog of Guitarras de Luna</p>
+	
+			<div class="row">
+	
+				<div class="span6">	
+				
+					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+					
+					<div class="post">
+
+						<!-- Display the Title as a link to the Post's permalink. -->
+
+						<h3><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+
+
+						<!-- Display the date (November 16th, 2009 format) and a link to other posts by this posts author. -->
+
+						<small><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></small>
+
+						<!-- Display the Post's content in a div box. -->
+
+						<div class="entry">
+							<?php the_content(); ?>
+						</div>
+
+						<!-- Display a comma separated list of the Post's Categories. -->
+
+						<p class="postmetadata">Posted in <?php the_category(', '); ?></p>
+					</div> <!-- end div post -->
+
+					<?php endwhile; else: ?>
+
+						<!-- The very first "if" tested to see if there were any Posts to -->
+						<!-- display.  This "else" part tells what do if there weren't any. -->
+						<p>Sorry, no posts matched your criteria.</p>
+
+					<!-- REALLY stop The Loop. -->
+					<?php endif; ?>
+				
+				</div> <!-- End span6 -->
+			
+			</div> <!-- End row -->
+			
+		</div> <!-- End class container -->
+		
+	</div> <!-- End about_us_landing -->
+
+	<footer>
+
+		<div class="top_bar">
+
+			<div class="container">
+
+				<div id="twitter-feed"></div>
+				<a href="https://twitter.com/guitarrasdelun1/" class="followus" title="Follow us on Twitter">@guitarrasdelun1</a>
+
+			</div>
+
+		</div>
+
+		<div class="main_body">
+
+			<div class="container">
+
+				<div class="row">
+
+					<section class="span4 contact_us">
+
+						<hgroup>
+							<h2>Contact us</h2>
+							<h3>We&rsquo;d love to hear from you</h3>
+						</hgroup>
+
+						<ul>
+							<li class="phone">914 . 214 . 8562</li>
+							<li class="email"><a href="/contact" title="Send us an email">Send us an email</a></li>
+							<li class="google"><a href="https://maps.google.com/maps?q=1940+Commerce+St,+Yorktown+Heights,+NY&hl=en&ll=41.276533,-73.780661&spn=0.007112,0.01281&sll=42.746632,-75.770041&sspn=3.557628,6.558838&oq=1940+&hnear=1940+Commerce+St,+Yorktown+Heights,+Westchester,+New+York+10598&t=m&z=16&iwloc=A" title="Find us on Google maps">Find us on Google Maps</a></li>
+						</ul>
+
+					</section>
+
+					<section class="span4 social">
+
+						<hgroup>
+							<h2>Social Media</h2>
+							<h3>Find us on&hellip;</h3>
+						</hgroup>
+
+						<a href="https://pinterest.com/guitarrasdeluna/" class="pinterest">Pinterest</a>
+						<a href="https://twitter.com/guitarrasdelun1" class="twitter">Twitter</a>
+						<a href="https://www.facebook.com/GuitarrasDeLunaCustomGuitarsAndMore" class="facebook">Facebook</a>
+
+
+					</section> <!-- End span4 social -->
+
+					<section class="span4 work_with_us">
+						<hgroup>
+							<h2>Work with us</h2>
+							<h3>Let us design your dream guitar!</h3>
+						</hgroup>
+
+						<a href="#" title="Custom Design Request" class="button">Tell us about your dream guitar</a>
+					</section>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="meta">
+
+			<div class="container">
+
+				<p>
+					&copy; Copyright Guitarras de Luna 2013<br>
+					1940 Commerce Street, Yorktown Heights, New York 10598
+				</p>
+				
+				<div class="logo"></div>
+
+			</div>
+
+		</div>
+
+	</footer>
+
+	<!--| JS |-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<script src="assets/js/plugins/isotope.min.js"></script>
+	<script src="assets/js/libs/modernizr-2.5.3.min.js"></script>
+	<script src="assets/js/plugins/transit.js"></script>
+	<script src="assets/js/plugins/history.js"></script>
+	<script src="assets/js/plugins/validate.min.js"></script>
+	<script src="assets/js/guitarras.js"></script>
+	<script src="assets/js/twitter-feed-reader.js"></script>
+
+</body>
+</html>
