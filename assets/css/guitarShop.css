@@ -1528,7 +1528,7 @@ span.loading{
 }
 
 /*
-	#141619 is very dark gray/blue, almost black
+	#32363f is very dark gray/blue, almost black
 	rgba(0,0,0,0.6) is black at 60% opacity
 */
 
@@ -1538,7 +1538,7 @@ body>footer{
 	clear:both;
 	position:relative;
 	z-index:60;
-	background:#141619 url(/assets/images/template/page_background.gif);
+	background:#32363f url(/assets/images/template/page_background.gif);
 	color:#FFF000;
 	text-shadow:1px 1px 1px 1px rgba(0,0,0,0.6)
 }
