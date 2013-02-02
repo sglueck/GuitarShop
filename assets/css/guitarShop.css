@@ -594,7 +594,7 @@ form .checkbox input:checked+i{
 	padding-top:100px;
 	border-top:solid 1px #FFF000;
 	box-shadow:0 1px #BBB000,0 2px #FFF000,0 3px #BBB000,0 4px #FFF000,0 5px #BBB000,0 6px #FFF000,0 3px 0 6px rgba(0,0,0,0.1); 
-	background:#FFF000 url(/assets/images/template/background.png)
+	background:#FFFFFF url(/assets/images/template/background.png)
 }
 
 .container{
